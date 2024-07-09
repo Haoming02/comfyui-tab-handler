@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-tab-handler"
+description = "This is an Extension for ComfyUI, which moves the menu to the specified corner on startup."
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/Haoming02/comfyui-tab-handler"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "comfyui-tab-handler"
+Icon = ""
