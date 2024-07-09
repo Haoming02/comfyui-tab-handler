@@ -1,7 +1,7 @@
 import { app } from "../../scripts/app.js";
 
 function interceptTab() {
-    document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
             e.preventDefault();
 
@@ -9,11 +9,8 @@ function interceptTab() {
             const activeTextarea = document.activeElement;
 
             const index = Array.from(textareas).indexOf(activeTextarea);
-            var nextIndex = 0;
-
-            if (e.shiftKey)
-                nextIndex = (index - 1 + textareas.length) % textareas.length;
-            else
+            const nextIndex = (e.shiftKey) ?
+                (index - 1 + textareas.length) % textareas.length :
                 nextIndex = (index + 1) % textareas.length;
 
             textareas[nextIndex].focus();
