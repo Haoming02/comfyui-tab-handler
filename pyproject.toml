@@ -2,7 +2,7 @@
 name = "comfyui-tab-handler"
 description = "Intercepts the Tab key to switch between textarea"
 version = "1.0.0"
-license = "MIT"
+license = { text = "MIT License" }
 
 [project.urls]
 Repository = "https://github.com/Haoming02/comfyui-tab-handler"
