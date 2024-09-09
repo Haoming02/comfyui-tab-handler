@@ -9,9 +9,8 @@ function interceptTab() {
             const activeTextarea = document.activeElement;
 
             const index = Array.from(textareas).indexOf(activeTextarea);
-            const nextIndex = (e.shiftKey) ?
-                (index - 1 + textareas.length) % textareas.length :
-                nextIndex = (index + 1) % textareas.length;
+            const nextIndex = ((!e.shiftKey) ? (index + 1) :
+                (index - 1 + textareas.length)) % textareas.length;
 
             textareas[nextIndex].focus();
         }
