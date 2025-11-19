@@ -1,11 +1,11 @@
 import { app } from "../../scripts/app.js";
 
 function interceptTab() {
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Tab") {
             e.preventDefault();
 
-            const fields = document.querySelectorAll('textarea.comfy-multiline-input');
+            const fields = document.querySelectorAll("textarea.comfy-multiline-input");
             const activeField = document.activeElement;
 
             const index = Array.from(fields).indexOf(activeField);
@@ -18,5 +18,7 @@ function interceptTab() {
 
 app.registerExtension({
     name: "Comfy.TabHandle",
-    async setup() { interceptTab(); }
+    async setup() {
+        interceptTab();
+    },
 });
