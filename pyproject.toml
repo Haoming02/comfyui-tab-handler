@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-tab-handler"
 description = "Use the Tab key to switch between textfields"
-version = "1.1.0"
+version = "1.2.0"
 license = { text = "MIT License" }
 dependencies = []
 

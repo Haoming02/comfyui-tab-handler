@@ -5,23 +5,18 @@ function interceptTab() {
         if (e.key === 'Tab') {
             e.preventDefault();
 
-            const textareas = document.querySelectorAll('textarea');
-            const activeTextarea = document.activeElement;
+            const fields = document.querySelectorAll('textarea.comfy-multiline-input');
+            const activeField = document.activeElement;
 
-            const index = Array.from(textareas).indexOf(activeTextarea);
-            const nextIndex = ((!e.shiftKey) ? (index + 1) :
-                (index - 1 + textareas.length)) % textareas.length;
+            const index = Array.from(fields).indexOf(activeField);
+            const nextIndex = (index + (e.shiftKey ? -1 : 1) + fields.length) % fields.length;
 
-            textareas[nextIndex].focus();
+            fields[nextIndex].focus();
         }
     });
 }
 
 app.registerExtension({
     name: "Comfy.TabHandle",
-    async setup() {
-
-        interceptTab();
-
-    }
+    async setup() { interceptTab(); }
 });
